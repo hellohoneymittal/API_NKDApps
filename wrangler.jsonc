@@ -1,0 +1,22 @@
+{
+  "name": "nkdapps-api",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-06",
+  "secrets_store_secrets": [
+    {
+      "binding": "APP_REFRESH_TOKEN_STORE",
+      "store_id": "fb5d2561268347ac8a5c9c9affa12041",
+      "secret_name": "APP_REFRESH_TOKEN",
+    },
+    {
+      "binding": "APP_CLIENT_ID_STORE",
+      "store_id": "fb5d2561268347ac8a5c9c9affa12041",
+      "secret_name": "APP_CLIENT_ID",
+    },
+    {
+      "binding": "APP_CLIENT_SECRET_STORE",
+      "store_id": "fb5d2561268347ac8a5c9c9affa12041",
+      "secret_name": "APP_CLIENT_SECRET",
+    },
+  ],
+}
