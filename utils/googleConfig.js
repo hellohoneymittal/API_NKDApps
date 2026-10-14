@@ -7,7 +7,7 @@ const GOOGLE_SCOPES = [
 ];
 
 export const GOOGLE_REDIRECT_URI =
-  "https://natures-api.nkd-community-gzb.workers.dev/oauth/callback";
+  "https://api-nkdapps.nityakrishnadas-pnc.workers.dev/oauth/callback";
 
 export async function READ_SECRET(env, name) {
   const value = env[name];

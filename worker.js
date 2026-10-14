@@ -136,8 +136,8 @@ export default {
       return new Response(
         JSON.stringify({
           status: true,
-          message: "Cloudflare Worker is running",
-          service: "Google Sheets API",
+          message: "CF Worker is running",
+          service: "API Gateway",
         }),
         {
           status: 200,
