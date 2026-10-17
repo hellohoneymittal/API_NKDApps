@@ -171,9 +171,9 @@ export default {
 
       const apiTypeMethodName = requestData.apiType;
       const inputData = requestData.inputData || {};
-      const appName = String(inputData.appName || requestData.appName || "")
-        .trim()
-        .toUpperCase();
+      const appName = String(
+        inputData.appName || requestData.appName || "",
+      ).trim();
       const appScriptId = APP_S_ID_MAP[appName];
 
       let response;
@@ -194,6 +194,28 @@ export default {
           if (appName === "NKDSadhnaTool") {
             switch (apiTypeMethodName) {
               case "SAVE_JAPA_DATA":
+                response = await callAppsScript(
+                  env,
+                  appScriptId,
+                  apiTypeMethodName,
+                  inputData,
+                );
+                break;
+
+              default:
+                response = {
+                  status: false,
+                  message: `Invalid apiType for ${appName}`,
+                  apiType: apiTypeMethodName,
+                  appName,
+                };
+                break;
+            }
+          }
+
+          if (appName === "ANOTHER") {
+            switch (apiTypeMethodName) {
+              case "testing":
                 response = await callAppsScript(
                   env,
                   appScriptId,
