@@ -4,7 +4,7 @@ import {
   getGoogleOAuthUrls,
 } from "./utils/googleConfig.js";
 
-import { callAppsScript } from "./api/CommonMethod.js";
+import { callAppsScript, runAppsScriptFunction } from "./api/CommonMethod.js";
 
 const APP_S_ID_MAP = {
   NKDSadhnaTool: "1Qbs3XsZvEFDW9vol10og9V4BqPjhu7w6AuhVuGO5BADFFfEUdt32RVaa",
@@ -99,6 +99,7 @@ export default {
       try {
         const result = await runAppsScriptFunction(
           env,
+          APP_S_ID_MAP["NKDSadhnaTool"],
           "TEST_EMAIL_PERMISSION",
         );
 
