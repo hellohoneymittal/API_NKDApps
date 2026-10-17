@@ -193,7 +193,7 @@ export default {
 
           if (appName === "NKDSadhnaTool") {
             switch (apiTypeMethodName) {
-              case "Testing":
+              case "SAVE_JAPA_DATA":
                 response = await callAppsScript(
                   env,
                   appScriptId,
